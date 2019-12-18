@@ -1,0 +1,24 @@
+<aside class="col-sm-3 ml-auto blog-sidebar">
+    {{ if and (.Site.Params.sidebar) (isset .Site.Params.sidebar "about") }}
+    <section class="sidebar-module sidebar-module-inset">
+      <h4>{{ i18n "about" }}</h4>
+      <p dir="auto">This website is powered by <a href="https://gohugo.io/">Hugo</a>. You can find the source code <a href="#">here</a>. <br/> It was deployed using <a href="https://jenkins.io/">Jenkins</a> and it is hosted on <a href="https://aws.amazon.com/">AWS</a> using <a href="https://aws.amazon.com/s3/">S3</a>.</p>
+    </section>
+    {{ end }}
+  
+  
+  
+    {{ with .Site.Menus.sidebar }}
+    <section class="sidebar-module">
+      <h6>{{ i18n "links" }}</h6>
+      <ol class="list-unstyled">
+        {{ range . }}
+        <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ol>
+    </section>
+    {{ end }}
+  </aside><!-- /.blog-sidebar -->
+  
+  {{- /* vim: set ts=2 sw=2 et: */}}
+  

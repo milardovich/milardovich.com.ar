@@ -1,0 +1,5 @@
+{{ $dateFormat := default "Mon Jan 2, 2006" (index .Site.Params "date_format") }}
+    <a class="blog-post-summary-title" href='{{ .Permalink }}'>{{ .Title | markdownify }}</a><br/>
+    <p class="blog-post-meta"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format $dateFormat }}</time> {{ i18n "authoredBy" }} {{ .Params.author | default .Site.Params.author }}{{ if or (.Params.categories) (.Params.tags) }} {{ i18n "postedIn" }} {{ partial "meta-terms.html" . }}{{ end }}</p>
+
+{{- /* vim: set ts=2 sw=2 et: */}}
