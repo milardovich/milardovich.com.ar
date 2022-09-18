@@ -1,5 +1,5 @@
 +++
-title = "Albert Semillas (WIP)"
+title = "Albert Semillas"
 description = ""
 tags = [
     "Vue.js",

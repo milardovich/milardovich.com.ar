@@ -3,7 +3,7 @@
 baseurl = "https://www.milardovich.com.ar/"
 languageCode = "en-us"
 title = "Sergio Milardovich"
-theme = "hugo-theme-bootstrap4-blog"
+theme = "milardo"
 # number of posts to show on home/category/tag pages (Default: 10)
 paginate = 5
 # optionally override the site's footer with custom copyright text
